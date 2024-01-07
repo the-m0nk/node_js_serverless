@@ -1,9 +1,21 @@
-<mxfile host="app.diagrams.net" modified="2024-01-07T10:31:34.403Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0" version="22.1.17" etag="-Ohdx-Y8hoV8JGSlusqO" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-07T10:50:09.590Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0" etag="BlFDAsYn8kcw8T9FWzwa" version="22.1.17" type="github">
   <diagram name="Page-1" id="p_J7WuFHsr9V7suKd00_">
-    <mxGraphModel>
+    <mxGraphModel dx="1050" dy="558" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="qDQdH6i96sj-8dlv3nB--1" value="&lt;b&gt;&lt;font color=&quot;#ff8040&quot; style=&quot;font-size: 36px;&quot;&gt;Node JS Microservice with Serverless&amp;nbsp; &lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="70" y="50" width="760" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="qDQdH6i96sj-8dlv3nB--2" value="&lt;div align=&quot;left&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Product Requirement &lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;System Design&lt;/font&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Technology &amp;amp; Infrastructure Selection &amp;amp; Decision&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Epics : Time Estimation&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Feasibility &amp;amp; POC(proof of concept)&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;TDD (Test driven development)&amp;amp; CI-CD&lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="190" y="130" width="580" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="qDQdH6i96sj-8dlv3nB--4" value="&lt;font style=&quot;font-size: 24px;&quot; color=&quot;#ec133f&quot;&gt;&lt;b&gt;&lt;i&gt;Resale Product Portal (Like E-Bay) C2C&lt;font&gt;&lt;br&gt;&lt;/font&gt;&lt;/i&gt;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="430" width="780" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="qDQdH6i96sj-8dlv3nB--5" value="&lt;div align=&quot;justify&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Need to build a web Application which can facilitate the buy, sale new and used/old products in &lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div align=&quot;justify&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;certain price range. Whether seller can post products and advertise it for sale and buyer can search and view product as per choice and buy it online.&lt;/font&gt;&lt;/div&gt;&lt;div align=&quot;justify&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Application should provide features to talk to buyer with seller directly without mediator and buy the &lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div align=&quot;justify&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;product by paying the price. Payment system will collect the money of the product and certain % of &lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div align=&quot;justify&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;the final product price will be hold for the platform and rest of will be released to seller. Buyer can rate&lt;/font&gt;&lt;/div&gt;&lt;div align=&quot;justify&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;the experience of purchase, seller, delivery etc. The communications of the every process will be &lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div align=&quot;justify&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;notify through SMS and email notification.&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="490" width="810" height="250" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
