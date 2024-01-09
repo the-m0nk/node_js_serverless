@@ -1,11 +1,25 @@
 import { APIGatewayProxyEventV2 } from "aws-lambda";
-import { SucessResponse, ErrorResponse } from "app/utility/response";
+import { ErrorResponse, SucessResponse } from "../utility/response";
+import { UserRepository } from "../repository/userRepository";
+import { autoInjectable } from "tsyringe";
+import { plainToClass } from "class-transformer";
+import { SignupInput } from "../models/dto/SignUpInput";
+import { AppValidatorError } from "app/utility/errors";
 
+@autoInjectable()
 export class UserService {
-  constructor() {}
+  repository: UserRepository; // Adding property
+  constructor(repository: UserRepository) {
+    this.repository = repository;
+  }
 
   async CreateUser(event: APIGatewayProxyEventV2) {
-    return SucessResponse({ message: "Response from Create user" });
+    const input = plainToClass(SignupInput, event.body);
+    const error = await AppValidatorError(input);
+    if (error) return ErrorResponse(404, error);
+
+    // await this.repository.CreateUserOperation();
+    return SucessResponse(input);
   }
 
   async UserLogin(event: APIGatewayProxyEventV2) {

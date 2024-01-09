@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev" : "serverless offline"
+    "dev": "serverless offline",
+    "deploy": "sls deploy --verbose"
   },
   "author": "",
   "license": "ISC",
@@ -15,9 +16,16 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
+    "@laconia/core": "^1.14.0",
+    "@middy/core": "^5.2.1",
+    "@middy/http-json-body-parser": "^5.2.1",
     "@types/aws-lambda": "^8.10.131",
     "aws-lambda": "^1.0.7",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
+    "reflect-metadata": "^0.2.1",
     "ts-node": "^10.9.2",
+    "tsyringe": "^4.8.0",
     "typescipt": "^1.0.0"
   }
 }

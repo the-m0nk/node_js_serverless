@@ -9,14 +9,17 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UserRepository = void 0;
-class UserRepository {
-    constructor() { }
-    CreateUserOperation() {
-        return __awaiter(this, void 0, void 0, function* () {
-            console.log("user created in DB");
-        });
+exports.AppValidatorError = void 0;
+const class_validator_1 = require("class-validator");
+const AppValidatorError = (input // Any is not good Idea
+) => __awaiter(void 0, void 0, void 0, function* () {
+    const error = yield (0, class_validator_1.validate)(input, {
+        ValidationError: { target: true },
+    });
+    if (error.length) {
+        return error;
     }
-}
-exports.UserRepository = UserRepository;
-//# sourceMappingURL=userRepository.js.map
+    return false;
+});
+exports.AppValidatorError = AppValidatorError;
+//# sourceMappingURL=errors.js.map
