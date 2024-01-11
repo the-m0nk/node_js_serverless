@@ -12,9 +12,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserRepository = void 0;
 class UserRepository {
     constructor() { }
-    CreateUserOperation() {
+    createAccount({ email, password, salt, phone, userType }) {
         return __awaiter(this, void 0, void 0, function* () {
-            console.log("user created in DB");
+            // DB Operation
         });
     }
 }

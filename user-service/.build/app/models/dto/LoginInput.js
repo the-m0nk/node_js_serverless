@@ -19,7 +19,7 @@ __decorate([
     __metadata("design:type", String)
 ], LoginInput.prototype, "email", void 0);
 __decorate([
-    (0, class_validator_1.Length)(6, 12),
+    (0, class_validator_1.Length)(6, 32),
     __metadata("design:type", String)
 ], LoginInput.prototype, "password", void 0);
 //# sourceMappingURL=LoginInput.js.map

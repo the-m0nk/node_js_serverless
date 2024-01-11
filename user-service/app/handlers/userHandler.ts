@@ -1,13 +1,13 @@
 import { APIGatewayProxyEventV2 } from "aws-lambda";
 import { UserService } from "../service/userService";
 import { ErrorResponse } from "../utility/response";
-import laconia from "@laconia/core";
-import {container} from "tsyringe"
+import { container } from "tsyringe";
 
-const service = container.resolve(UserService)
-export const Signup =  laconia((event: APIGatewayProxyEventV2) => {
+const service = container.resolve(UserService);
+
+export const Signup = (event: APIGatewayProxyEventV2) => {
   return service.CreateUser(event);
-});
+};
 
 export const Login = async (event: APIGatewayProxyEventV2) => {
   return service.UserLogin(event);

@@ -4,7 +4,8 @@ import { UserRepository } from "../repository/userRepository";
 import { autoInjectable } from "tsyringe";
 import { plainToClass } from "class-transformer";
 import { SignupInput } from "../models/dto/SignUpInput";
-import { AppValidatorError } from "app/utility/errors";
+import { AppValidatorError } from "../utility/errors";
+import { } from "../utility/password"
 
 @autoInjectable()
 export class UserService {
@@ -14,12 +15,26 @@ export class UserService {
   }
 
   async CreateUser(event: APIGatewayProxyEventV2) {
-    const input = plainToClass(SignupInput, event.body);
-    const error = await AppValidatorError(input);
-    if (error) return ErrorResponse(404, error);
+    try {
+      const requestBody = JSON.parse(event.body);
+      const input = plainToClass(SignupInput, requestBody);
+      const error = await AppValidatorError(input);
+      if (error) return ErrorResponse(404, error);
 
-    // await this.repository.CreateUserOperation();
-    return SucessResponse(input);
+      const salt = "";
+      const hashedPassword = "";
+      const data = await this.repository.createAccount({
+        email : input.email,
+        password : hashedPassword,
+        phone : input.phone,
+        userType : "BUYER",
+        salt : salt
+      })
+      return SucessResponse({});
+    } catch (error) {
+      console.log(error);
+      return ErrorResponse(500, error);
+    }
   }
 
   async UserLogin(event: APIGatewayProxyEventV2) {

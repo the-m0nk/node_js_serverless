@@ -24,19 +24,34 @@ const userRepository_1 = require("../repository/userRepository");
 const tsyringe_1 = require("tsyringe");
 const class_transformer_1 = require("class-transformer");
 const SignUpInput_1 = require("../models/dto/SignUpInput");
-const errors_1 = require("app/utility/errors");
+const errors_1 = require("../utility/errors");
 let UserService = class UserService {
     constructor(repository) {
         this.repository = repository;
     }
     CreateUser(event) {
         return __awaiter(this, void 0, void 0, function* () {
-            const input = (0, class_transformer_1.plainToClass)(SignUpInput_1.SignupInput, event.body);
-            const error = yield (0, errors_1.AppValidatorError)(input);
-            if (error)
-                return (0, response_1.ErrorResponse)(404, error);
-            // await this.repository.CreateUserOperation();
-            return (0, response_1.SucessResponse)(input);
+            try {
+                const requestBody = JSON.parse(event.body);
+                const input = (0, class_transformer_1.plainToClass)(SignUpInput_1.SignupInput, requestBody);
+                const error = yield (0, errors_1.AppValidatorError)(input);
+                if (error)
+                    return (0, response_1.ErrorResponse)(404, error);
+                const salt = "";
+                const hashedPassword = "";
+                const data = yield this.repository.createAccount({
+                    email: input.email,
+                    password: hashedPassword,
+                    phone: input.phone,
+                    userType: "BUYER",
+                    salt: salt
+                });
+                return (0, response_1.SucessResponse)({});
+            }
+            catch (error) {
+                console.log(error);
+                return (0, response_1.ErrorResponse)(500, error);
+            }
         });
     }
     UserLogin(event) {
